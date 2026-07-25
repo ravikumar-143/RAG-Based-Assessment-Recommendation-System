@@ -1,297 +1,323 @@
-# 🚀Assessment Recommendation Engine
+# 🚀 RAG-Based Assessment Recommendation System
 
-A production-grade Retrieval-Augmented Generation (RAG) system that scrapes SHL Individual Test Solutions, builds vector embeddings with FAISS, reranks using Groq LLM, balances assessment domains, and serves recommendations via FastAPI and Streamlit.
-
----
-
-## 🔍 Overview
-
-This system:
-
-- Scrapes SHL product catalog (type=1)
-- Builds MiniLM embeddings + FAISS index
-- Performs vector retrieval
-- Reranks using Groq LLaMA (llama3-70b-8192)
-- Applies domain balancing (tech / behavioral / cognitive)
-- Exposes FastAPI endpoints
-- Provides Streamlit frontend
-- Generates submission CSV for evaluation
+A production-ready Retrieval-Augmented Generation (RAG) system that recommends the most relevant SHL assessments based on job roles and skills using **FAISS**, **Sentence Transformers**, **Ollama LLM**, **FastAPI**, and **Streamlit**.
 
 ---
 
-## ✅ Manager Checklist
+# 🔍 Overview
 
-- ✔ Catalog scraping (≥ 377 items validation)
-- ✔ FAISS embedding index + metadata store
-- ✔ RAG pipeline with Groq reranking
-- ✔ Domain balancing logic
-- ✔ Recall@10 evaluation
-- ✔ FastAPI backend
-- ✔ Streamlit frontend
-- ✔ Submission CSV generator
+This project helps recruiters and hiring managers quickly identify the most suitable SHL assessments for a given job role or skill set.
 
----
+The system:
 
-## 🌐 Live Endpoints
-
-> Update after deployment
-
-- **Web App URL:** `<insert Streamlit public URL>`
-- **API Endpoint:**
-  
-  ```http
-  POST https://<your-api-host>/recommend
-  ```
-
-  **Request Body**
-  ```json
-  {
-    "query": "text"
-  }
-  ```
+- Scrapes the SHL assessment catalog
+- Builds vector embeddings using Sentence Transformers
+- Stores embeddings in a FAISS vector database
+- Retrieves the most relevant assessments using semantic search
+- Reranks results using a local Ollama LLM
+- Removes report-only assessments
+- Exposes a FastAPI backend
+- Provides an interactive Streamlit frontend
 
 ---
 
-## ⚙️ Quickstart Guide
+# ✨ Features
 
-### 1️⃣ Install Dependencies
+- Semantic Search using FAISS
+- Local LLM Reranking using Ollama (Qwen 2.5)
+- FastAPI REST API
+- Streamlit User Interface
+- Duplicate Removal
+- Report Filtering
+- Query Expansion for Job Roles
+- Modular Project Structure
+- Fully Local Deployment (No API Key Required)
+
+---
+
+# 🛠 Tech Stack
+
+- Python 3.11+
+- FastAPI
+- Streamlit
+- FAISS
+- Sentence Transformers
+- Ollama
+- Qwen2.5
+- Pandas
+- BeautifulSoup
+- Requests
+- NumPy
+
+---
+
+# 📂 Project Structure
+
+```
+RAG-Based-Assessment-Recommendation-System/
+
+│
+├── api/
+│   └── app.py
+│
+├── frontend/
+│   └── app.py
+│
+├── retrieval/
+│   ├── search.py
+│   └── pipeline.py
+│
+├── reranker/
+│   ├── rerank.py
+│   └── domain_detection.py
+│
+├── embeddings/
+│   ├── embedder.py
+│   └── index_builder.py
+│
+├── scraper/
+│   └── shl_scraper.py
+│
+├── evaluation/
+│   └── evaluate.py
+│
+├── submission/
+│   └── generate_submission.py
+│
+├── data/
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/ravikumar-143/RAG-Based-Assessment-Recommendation-System.git
+```
+
+Move into the project
+
+```bash
+cd RAG-Based-Assessment-Recommendation-System
+```
+
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Set Environment Variables
+---
 
-Create `.env` file:
+# 🤖 Install Ollama
 
-```
-GROQ_API_KEY=your_api_key_here
-```
+Download Ollama
 
-### 3️⃣ Scrape SHL Catalog (Validates ≥ 377 items)
+https://ollama.com/download
+
+Pull the model
 
 ```bash
-python scraper/shl_scraper.py
+ollama pull qwen2.5:1.5b
 ```
 
-### 4️⃣ Build Embeddings + FAISS Index
+Verify
+
+```bash
+ollama list
+```
+
+---
+
+# 📦 Build Embeddings
 
 ```bash
 python embeddings/index_builder.py
 ```
 
-### 5️⃣ (Optional) Run Evaluation
+---
 
-Populate:
-
-```
-data/train_dataset.csv
-```
-
-Then:
+# 🚀 Run FastAPI
 
 ```bash
-python evaluation/evaluate.py
+python -m uvicorn api.app:app --port 8001
 ```
 
-### 6️⃣ Run FastAPI Backend
+API Documentation
 
-```bash
-uvicorn api.app:app --host 0.0.0.0 --port 8000
+```
+http://127.0.0.1:8001/docs
 ```
 
-### 7️⃣ Run Streamlit Frontend
+---
+
+# 🎨 Run Streamlit
 
 ```bash
 streamlit run frontend/app.py
 ```
 
-If API is remote:
+Open
 
 ```
-set API_URL=https://your-api-host
-```
-
-### 8️⃣ Generate Final Submission
-
-Populate:
-
-```
-data/test_dataset.csv
-```
-
-Then:
-
-```bash
-python submission/generate_submission.py
-```
-
-Output:
-
-```
-submission/submission.csv
+http://localhost:8501
 ```
 
 ---
 
-## 📂 Project Structure
+# 🔌 API
 
-```
-scraper/
- └── shl_scraper.py
+## POST /recommend
 
-embeddings/
- └── index_builder.py
-
-retrieval/
- ├── search.py
- └── pipeline.py
-
-reranker/
- ├── domain_detection.py
- └── rerank.py
-
-evaluation/
- └── evaluate.py
-
-api/
- └── app.py
-
-frontend/
- └── app.py
-
-submission/
- └── generate_submission.py
-
-scripts/
- └── sanity_check.py
-```
-
----
-
-## 📊 Data Artifacts
-
-| File | Description |
-|------|-------------|
-| `data/cleaned_catalog.json` | Scraped SHL catalog (≥377 items) |
-| `data/train_dataset.csv` | Training queries with ground truth |
-| `data/test_dataset.csv` | Test queries |
-| `embeddings/faiss.index` | FAISS vector index |
-| `embeddings/metadata.json` | Metadata store |
-| `submission/submission.csv` | Final output |
-
----
-
-## 🔌 API Contract
-
-### POST `/recommend`
-
-**Input**
+### Request
 
 ```json
 {
-  "query": "string"
+    "query": "Python Developer with SQL"
 }
 ```
 
-**Output**
+### Response
 
 ```json
 {
-  "recommended_assessments": [
-    {
-      "url": "",
-      "name": "",
-      "adaptive_support": "Yes/No",
-      "description": "",
-      "duration": null,
-      "remote_support": "Yes/No",
-      "test_type": ["..."]
-    }
-  ]
+    "recommended_assessments": [
+        {
+            "name": "Python (New)",
+            "url": "...",
+            "description": "...",
+            "duration": null,
+            "adaptive_support": "No",
+            "remote_support": "No",
+            "test_type": ["K"]
+        }
+    ]
 }
 ```
 
-### Behavior
-
-- Returns 1–10 results
-- 400 → Empty query
-- 404 → No results
-- 500 → Index missing / internal error
-
 ---
 
-## 🧠 Architecture
-
-1. Scraper → Extract SHL catalog
-2. Embeddings → MiniLM vector encoding
-3. Retrieval → FAISS similarity search
-4. Reranking → Groq LLaMA JSON-only contract
-5. Domain Balancing → Mixed category coverage
-6. API → FastAPI serving layer
-7. UI → Streamlit client
-
----
-
-## 🧪 Sanity Check
-
-After scraping and building index:
-
-```bash
-python scripts/sanity_check.py
-```
-
-Validates:
-
-- Catalog size
-- Index presence
-- Sample retrieval
-- No LLM dependency
-
----
-
-## 🛡 Notes
-
-- Uses `lxml`, `BeautifulSoup`, `tenacity`
-- Groq LLaMA 3 (70B) reranking with temperature=0
-- Falls back to vector retrieval on LLM/API failure
-- Streamlit displays:
-  - Clickable URLs
-  - Description
-  - Duration
-  - Adaptive & remote support
-  - Test type tags
-
----
-
-## 📈 Evaluation Metric
-
-- Recall@10
-- Baseline vs Rerank vs Balanced
-
----
-
-## 📌 Submission Format
+# 🧠 Retrieval Pipeline
 
 ```
-Query | Assessment_url
-```
-
-Generated via:
-
-```bash
-python submission/generate_submission.py
+User Query
+      │
+      ▼
+Query Expansion
+      │
+      ▼
+Sentence Transformer
+      │
+      ▼
+FAISS Vector Search
+      │
+      ▼
+Top 50 Results
+      │
+      ▼
+Report Filtering
+      │
+      ▼
+Ollama LLM Reranking
+      │
+      ▼
+Top 10 Assessments
+      │
+      ▼
+FastAPI
+      │
+      ▼
+Streamlit UI
 ```
 
 ---
 
-## 👨‍💻 Author
+# 📸 Application Screenshots
 
-Teja Nadella  
-GitHub: https://github.com/TejaNadella28
+## Home Page
+
+(Add Screenshot Here)
 
 ---
 
-## ⭐ If You Found This Useful
+## Recommendations
 
-Give it a star ⭐
+(Add Screenshot Here)
+
+---
+
+## FastAPI Swagger
+
+(Add Screenshot Here)
+
+---
+
+# 📊 Features Implemented
+
+- SHL Assessment Scraper
+- Semantic Search
+- FAISS Vector Database
+- Sentence Transformer Embeddings
+- Query Expansion
+- Report Filtering
+- Duplicate Removal
+- LLM Reranking
+- FastAPI Backend
+- Streamlit Frontend
+- REST API
+- Local LLM Deployment
+- Evaluation Scripts
+
+---
+
+# 📈 Future Improvements
+
+- PDF Job Description Upload
+- Resume Parsing
+- Hybrid Search (BM25 + FAISS)
+- Docker Deployment
+- Azure Deployment
+- Kubernetes Support
+- User Authentication
+- Caching
+- Feedback Learning
+
+---
+
+# 👨‍💻 Author
+
+**K. Ravi Kumar**
+
+📧 Email: kravik640@gmail.com
+
+🔗 LinkedIn:
+https://www.linkedin.com/in/kosgi-ravi-kumar-2a009a282
+
+🔗 GitHub:
+https://github.com/ravikumar-143
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
