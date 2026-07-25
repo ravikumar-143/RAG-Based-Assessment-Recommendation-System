@@ -1,0 +1,61 @@
+Query: Data analyst with Python and SQL
+Detected domains: {'technical': 3, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 6}
+Test type distribution: {'K': 6}
+Balanced: True
+
+Query: Senior Java developer building microservices
+Detected domains: {'technical': 2, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 6}
+Test type distribution: {'K': 6}
+Balanced: True
+
+Query: Customer service phone support role
+Detected domains: {'technical': 0, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'other': 6}
+Test type distribution: {'BS': 1, 'SB': 1, 'BPS': 2, 'PC': 2}
+Balanced: True
+
+Query: Executive leadership judgment assessment
+Detected domains: {'technical': 0, 'behavioral': 1, 'cognitive': 1}
+Domain counts (top 10): {'behavioral': 6}
+Test type distribution: {'B': 3, 'P': 3}
+Balanced: False
+
+Query: Cybersecurity risk management analyst
+Detected domains: {'technical': 0, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 5, 'behavioral': 1}
+Test type distribution: {'K': 3, 'S': 2, 'P': 1}
+Balanced: True
+
+Query: Cloud engineer working on AWS and containers
+Detected domains: {'technical': 2, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 4, 'cognitive': 2}
+Test type distribution: {'K': 4, 'C': 2}
+Balanced: True
+
+Query: Accounts payable and receivable specialist
+Detected domains: {'technical': 0, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 5, 'other': 1}
+Test type distribution: {'K': 3, 'S': 2, 'CP': 1}
+Balanced: True
+
+Query: Data entry speed and accuracy assessment
+Detected domains: {'technical': 1, 'behavioral': 0, 'cognitive': 1}
+Domain counts (top 10): {'technical': 5, 'other': 1}
+Test type distribution: {'K': 3, 'S': 2, 'AK': 1}
+Balanced: False
+
+Query: Front-end developer using Angular
+Detected domains: {'technical': 1, 'behavioral': 0, 'cognitive': 0}
+Domain counts (top 10): {'technical': 6}
+Test type distribution: {'K': 5, 'S': 1}
+Balanced: True
+
+Query: Leadership and collaboration personality fit
+Detected domains: {'technical': 0, 'behavioral': 2, 'cognitive': 0}
+Domain counts (top 10): {'behavioral': 5, 'cognitive': 1}
+Test type distribution: {'P': 5, 'D': 1}
+Balanced: True
+
+Multi-domain queries balanced: 0.00%

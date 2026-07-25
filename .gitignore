@@ -1,0 +1,74 @@
+# ==========================
+# Environment Variables
+# ==========================
+.env
+
+# ==========================
+# Virtual Environment
+# ==========================
+.venv/
+venv/
+env/
+
+# ==========================
+# Python Cache
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+
+# ==========================
+# Model Cache
+# ==========================
+model_cache/
+*.safetensors
+
+# ==========================
+# Embeddings / FAISS Indexes
+# (Ignore generated files)
+# ==========================
+embeddings/*.faiss
+embeddings/*.pkl
+embeddings/*.npy
+embeddings/*.index
+
+# ==========================
+# Streamlit Cache
+# ==========================
+.streamlit/secrets.toml
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Jupyter
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# Build
+# ==========================
+build/
+dist/
+*.egg-info/
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp

@@ -1,0 +1,31 @@
+Groq reranking ACTIVE
+
+                                       query                                                                                      truth  baseline_recall@10  rerank_recall@10  balanced_recall@10
+            Data analyst with Python and SQL                                 https://www.shl.com/products/product-catalog/view/sql-new/                 1.0               1.0                 1.0
+            Data analyst with Python and SQL                          https://www.shl.com/products/product-catalog/view/sql-server-new/                 1.0               1.0                 1.0
+            Data analyst with Python and SQL   https://www.shl.com/products/product-catalog/view/microsoft-sql-server-2014-programming/                 1.0               1.0                 1.0
+Senior Java developer building microservices            https://www.shl.com/products/product-catalog/view/core-java-advanced-level-new/                 1.0               1.0                 1.0
+Senior Java developer building microservices               https://www.shl.com/products/product-catalog/view/core-java-entry-level-new/                 1.0               1.0                 1.0
+Senior Java developer building microservices                              https://www.shl.com/products/product-catalog/view/spring-new/                 0.0               0.0                 0.0
+         Customer service phone support role       https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/                 1.0               1.0                 1.0
+         Customer service phone support role         https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/                 1.0               1.0                 1.0
+    Executive leadership judgment assessment                     https://www.shl.com/products/product-catalog/view/executive-scenarios/                 1.0               1.0                 1.0
+    Executive leadership judgment assessment    https://www.shl.com/products/product-catalog/view/executive-scenarios-narrative-report/                 1.0               1.0                 1.0
+    Executive leadership judgment assessment      https://www.shl.com/products/product-catalog/view/executive-scenarios-profile-report/                 1.0               1.0                 1.0
+       Cybersecurity risk management analyst                          https://www.shl.com/products/product-catalog/view/cyber-risk-new/                 1.0               1.0                 1.0
+       Cybersecurity risk management analyst                          https://www.shl.com/products/product-catalog/view/hipaa-security/                 0.0               0.0                 0.0
+Cloud engineer working on AWS and containers https://www.shl.com/products/product-catalog/view/amazon-web-services-aws-development-new/                 1.0               1.0                 1.0
+Cloud engineer working on AWS and containers                              https://www.shl.com/products/product-catalog/view/docker-new/                 1.0               1.0                 1.0
+  Accounts payable and receivable specialist                    https://www.shl.com/products/product-catalog/view/accounts-payable-new/                 1.0               1.0                 1.0
+  Accounts payable and receivable specialist                 https://www.shl.com/products/product-catalog/view/accounts-receivable-new/                 1.0               1.0                 1.0
+  Accounts payable and receivable specialist         https://www.shl.com/products/product-catalog/view/accounts-payable-simulation-new/                 1.0               1.0                 1.0
+    Data entry speed and accuracy assessment                          https://www.shl.com/products/product-catalog/view/data-entry-new/                 1.0               1.0                 1.0
+    Data entry speed and accuracy assessment https://www.shl.com/products/product-catalog/view/data-entry-alphanumeric-split-screen-us/                 1.0               1.0                 1.0
+           Front-end developer using Angular                           https://www.shl.com/products/product-catalog/view/angular-6-new/                 1.0               1.0                 1.0
+           Front-end developer using Angular                           https://www.shl.com/products/product-catalog/view/angularjs-new/                 1.0               1.0                 1.0
+Leadership and collaboration personality fit         https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/                 0.0               0.0                 0.0
+Leadership and collaboration personality fit                     https://www.shl.com/products/product-catalog/view/executive-scenarios/                 0.0               0.0                 0.0
+
+Baseline Mean Recall@10: 0.833
+Reranked Mean Recall@10: 0.833
+Balanced Mean Recall@10: 0.833

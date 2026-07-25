@@ -1,0 +1,80 @@
+2026-03-01 18:08:18.918028: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-01 18:08:20.378787: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-01 18:08:27 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:08:31 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Data analyst with Python and SQL
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:08:38 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:08:41 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Data analyst with Python and SQL
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:08:48 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:08:51 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Data analyst with Python and SQL
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:08:57 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:00 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Senior Java developer building microservices
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:09:07 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:10 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Senior Java developer building microservices
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:09:16 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:20 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Senior Java developer building microservices
+Baseline Recall@10: 0.00
+Reranked Recall@10: 0.00
+Balanced Recall@10: 0.00
+2026-03-01 18:09:26 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:30 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Customer service phone support role
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:09:36 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:39 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Customer service phone support role
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:09:46 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:09:50 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Executive leadership judgment assessment
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:09:56 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:10:00 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Executive leadership judgment assessment
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:10:08 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+2026-03-01 18:10:11 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
+------------------------------------
+Query: Executive leadership judgment assessment
+Baseline Recall@10: 1.00
+Reranked Recall@10: 1.00
+Balanced Recall@10: 1.00
+2026-03-01 18:10:18 [WARNING] reranker.rerank - LLM rerank failed: Client.__init__() got an unexpected keyword argument 'proxies'; using retrieval order
